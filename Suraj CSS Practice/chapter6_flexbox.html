@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container{
+            background-color: aqua;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            /* flex-wrap:wrap-reverse; */
+            justify-content: center;
+            align-items: center; /*it makes the flex items center aligned inside the flex box*/
+            flex-wrap: wrap;
+            /* align-content: center;  */
+            /*while applying the align-items, if we wrap the items then we will notice that some space will be coming up between those items. To remove these spaces during wraping, we can use align-content*/
+        }
+        .box1{
+            background-color: blue;
+            color: white;
+            width: 20%;
+            height: 130px;
+            border: 2px solid black;
+            /* order: 4;  */
+            /* box1 will come at 4th position */
+            /* align-self:flex-end;  */
+            /*This will only apply on box1 as this property is only applicable for flex items*/
+            /* flex-grow: 1; */
+        }
+        .box2{
+            background-color: red;
+            color: white;
+            width: 20%;
+            height: 130px;
+            border: 2px solid black;
+            /* flex: 5; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Box1</div>
+        <div class="box2">Box2</div>
+        <div class="box2">Box2a</div>
+        <div class="box2">Box2b</div>
+    </div>
+</body>
+</html>

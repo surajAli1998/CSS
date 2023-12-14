@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 50vh;
+            display: grid;
+            background-color: rgb(255, 196, 0);
+            /* row-gap: 9px; */
+            grid-template-columns: 300px 300px auto; /*This will create 3 columns of width 300px, 300px and last column will get the remaining width*/
+    
+            /* column-gap: 9px; */
+            gap: 9px 9px; /*this short hand for row gap and column gap, first value is for row gap and second one is for column gap*/
+
+            grid-template-rows: 70px 70px 70px; /*This will change the heights of the rows as per the given values*/
+
+            /* justify-content: center; */
+            height: 80vh;
+            align-content: center;
+        }
+        .item{
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        #item1{
+            /*Grid row and grid column property only applicable for items under grid container*/
+            grid-row: 1/3;
+            grid-column: 1/3;
+            /* grid-row: 1/span 3; */
+            /* grid-column: 1/span 3; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">Item 1</div>
+        <div class="item" id="item2">Item 2</div>
+        <div class="item" id="item3">Item 3</div>
+        <div class="item" id="item4">Item 4</div>
+        <div class="item" id="item5">Item 5</div>
+        <div class="item" id="item6">Item 6</div>
+        <div class="item" id="item7">Item 7</div>
+        <div class="item" id="item8">Item 8</div>
+    </div>
+</body>
+</html>

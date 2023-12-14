@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5 Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: inline;
+            /* list-style: square outside; */
+        }
+        header{
+            background-color: aqua;
+            color: blue;
+            height: 64px;
+            position: sticky; /*It means header is sticked or fixed now, it will not moved by scrollbar and also*/
+            top: 0; /*so if we only write position:sticky then it will not work, because we have to also give the position properties like top,left,right,bottom etc then only it will work*/
+            z-index: 1; /*This will make sure that if any scrollable element is there which margin is overlapping with this element then scroll will happen underneath the header not over the current element*/
+        }
+        p{
+            text-align: center;
+            border: 2px solid rgb(8, 8, 8);
+        }
+        .container{
+            background-color: blueviolet;
+            height: 2000px;
+            width: 50vw;
+            margin: auto;
+            position: relative;
+            /* z-index: 2; */
+        }
+        .box1{
+            background-color: chartreuse;
+            width: 30%; /*it means width is 30% of the width of its parent which is container div*/
+            height: 30%;
+            position: absolute; /*it means that its size will relative to its first non static ancester element which is container div. Thats mean if we apply top left right on this box1 then its position will change only inside the conatiner area.*/
+            right: 0px;
+        }
+        .box2{
+            background-color: rgb(225, 69, 207);
+            width: 30%;
+            height: 30%;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul type="none">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contacts</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem alias quod praesentium repellat assumenda dolore error explicabo itaque aspernatur iste provident sunt delectus cupiditate veritatis magni officiis pariatur nihil fugit magnam, modi ipsum.</p>
+        <div class="box1">
+            I am a box1
+        </div>
+        <div class="box2">
+            I am a box2
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container{
+            background-color: rgb(129, 183, 222);
+        }
+        .box{
+            border: 2px solid black;
+            display: inline-block;
+        }
+        img{
+            width: 50%;
+            height: 100%;
+            transition-property: width; /*specify on which property transition will apply*/
+            transition-duration: 0.7s; 
+            transition-timing-function: ease-out;
+            transition-delay: 2s; /*here in this case after hovering on the image, transition will start after 3 second delay*/
+
+            transition: width 0.7s ease-in 2s, height 0.5s ease-out 2s; 
+            /*shorthand for transition*/
+            /*we can add multiple property in comma seperated format like this above*/
+        }
+        img:hover{
+            width: 30%; /*if we hover on img then its width will change to 30 percent of box*/
+            height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="https://source.unsplash.com/960x520/?nature,water">
+        </div>
+    </div>
+</body>
+</html>

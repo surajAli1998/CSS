@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(29, 91, 197);
+        }
+        .box{
+            background-color: rgb(20, 165, 202);
+            color: rgb(2, 24, 44);
+            width: 30%;
+            height: 30%;
+            border: 2px solid navy;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* animation-name: widthAnimation;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-timing-function: ease-in-out; */
+
+            /*below is the animation shorthand*/
+            animation: widthAnimation 3s ease-in-out 2s 3 alternate;
+        }
+        img{
+            width: 70px;
+            height: 70px;
+            animation: dragonAnimation 2s ease-in-out 2s 3;
+        }
+        @keyframes widthAnimation {
+            from{
+                width: 30%;
+            }
+            to{
+                width: 70%;
+            }
+        }
+        @keyframes dragonAnimation {
+            /* from{
+                width: 70px;
+                height: 70px;
+            }
+            to{
+                width: 320px;
+                height: 320px;
+            } */
+            0%{
+                width: 70px;
+                height: 70px;
+            }
+            50%{
+                width: 250px;
+                height: 250px;
+            }
+            100%{
+                width: 360px;
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is box
+        </div>
+        <img src="dragon.png" alt="">
+    </div>
+</body>
+</html>
